@@ -70,6 +70,23 @@ variable "tag_project" {
 }
 
 variable "ecs_task_definitions" {
+  default = <<EOF
+[
+	{
+		"name": "container-name",
+		"image": "image-name",
+		"cpu": 1024,
+		"memory": 512,
+		"links": [],
+		"portMappings": [
+			{
+				"containerPort": 80,
+				"hostPort": 8000
+			}
+		]
+	}
+]
+EOF
   description = "The task definition for ECS cluster"
 }
 
