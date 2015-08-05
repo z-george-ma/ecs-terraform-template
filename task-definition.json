@@ -1,0 +1,15 @@
+[
+	{
+		"name": "container-name",
+		"image": "image-name",
+		"cpu": 1024,
+		"memory": 512,
+		"links": [],
+		"portMappings": [
+			{
+				"containerPort": 80,
+				"hostPort": 8000
+			}
+		]
+	}
+]
