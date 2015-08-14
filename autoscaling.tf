@@ -16,6 +16,12 @@ resource "aws_autoscaling_group" "asg" {
   }
   
   tag {
+    key = "Owner"
+    value = "${var.tag_owner}"
+    propagate_at_launch = true
+  }
+  
+  tag {
     key = "Stream"
     value = "${var.tag_name}"
     propagate_at_launch = true

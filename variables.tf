@@ -59,6 +59,11 @@ variable "tag_name" {
   description = "The Name tag"
 }
 
+variable "tag_owner" {
+  default = ""
+  description = "The Owner tag"
+}
+
 variable "tag_stream" {
   default = ""
   description = "The Stream tag"

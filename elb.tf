@@ -22,6 +22,13 @@ resource "aws_elb" "elb" {
   cross_zone_load_balancing = true
   connection_draining = true
   connection_draining_timeout = 60
+  
+  tags {
+    Name = "${var.tag_name}"
+    Owner = "${var.tag_owner}"
+    Project = "${var.tag_project}"
+    Stream = "${var.tag_stream}"
+  }
 }
 
 resource "aws_security_group" "elb_security_group" {
